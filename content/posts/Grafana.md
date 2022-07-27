@@ -34,7 +34,7 @@ Grafana viene de base con una base de datos SQLite que emplea para guardar sus u
 
 ### Objetivo final
 
-Monitorizar los recursos de todos los servers desde S30 con un container de Grafana que se pueda ver desde la dirección de grafana.labs.pue.es. También que ese Grafana reciba la información desde un container de InfluxDB, que a su vez, recibirá la información de Telegrafs que estarán instalados tanto en local como en el resto de servers.
+Monitorizar los recursos de todos los servers desde el server central con un container de Grafana que se pueda ver desde la dirección de grafana.labs.pue.es. También que ese Grafana reciba la información desde un container de InfluxDB, que a su vez, recibirá la información de Telegrafs que estarán instalados tanto en local como en el resto de servers.
 
 ### Pasos seguidos
 
@@ -42,13 +42,13 @@ Monitorizar los recursos de todos los servers desde S30 con un container de Graf
 -   ☒ Crea interfaz para entender como funcionan las queries de Influx
 -   ☒ Explicar que representa la interfaz
 -   ☒ Instalar en múltiples hosts con un solo dB
-    -   ☒ Hacer Docker-compose para S30 con InfluxDB Grafana Y MySQL
+    -   ☒ Hacer Docker-compose para el server central con InfluxDB Grafana Y MySQL
         -   ☒ Escribir-lo
         -   ☒ Probarlo
         -   ☒ Solucionar el error con el container del grafana
         -   ☒ Preguntar a Ramón que le parece el compose
-        -   ☒ Probarlo en s30
-            -   ☒ Solucionar error al acceder desde un buscador web al grafana en s30
+        -   ☒ Probarlo en el server central
+            -   ☒ Solucionar error al acceder desde un buscador web al grafana en el server central
             -   ☒ Hacer que se pueda acceder a grafana desde https con traefik
     -   ☒ Haz que InfluxDB escuche por un puerto a otros servers
     -   ☒ Instalar telegraf fuera de los containers
@@ -198,7 +198,7 @@ Foto del resultado:
 
 ### 2 Instalación en los servidores reales
 
-#### 2.1 Instalar en s30 InfluxDB y Grafana con MySQL con containers y Telegraf como servicio
+#### 2.1 Instalar en el server central InfluxDB y Grafana con MySQL con containers y Telegraf como servicio
 
 Creamos los contenedores de Grafana, InfluxDB y MySQL con el siguiente compose:
 
@@ -276,7 +276,7 @@ networks:
     external: true
 ```
 
-Este docker-compose, aparte de levantar los contenedores, abre el puerto 8086 desde la IP 10.91.240.155 como si fuera el puerto 8086 de la máquina host. Utilizaremos esa IP y puerto después cuando hagamos que telegraf envíe los datos hacia la base de datos en S30.
+Este docker-compose, aparte de levantar los contenedores, abre el puerto 8086 desde la IP 10.91.240.155 como si fuera el puerto 8086 de la máquina host. Utilizaremos esa IP y puerto después cuando hagamos que telegraf envíe los datos hacia la base de datos en el server central.
 
 Para poder hacer que Traefik traduzca el nombre y nos proporcione HTTPS hay que añadir las siguientes líneas al docker-compose.
 
@@ -298,7 +298,7 @@ labels:
         - traefik.docker.network=traefik
 ```
 
-El archivo telegraf.conf que usaremos para enviar datos desde todos los servers a S30 es el siguiente:
+El archivo telegraf.conf que usaremos para enviar datos desde todos los servers a el server central es el siguiente:
 
 ``` yml
 # Configuration for sending metrics to InfluxDB
