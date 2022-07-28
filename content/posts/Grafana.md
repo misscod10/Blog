@@ -46,7 +46,6 @@ Monitorizar los recursos de todos los servers desde el server central con un con
         -   ☒ Escribir-lo
         -   ☒ Probarlo
         -   ☒ Solucionar el error con el container del grafana
-        -   ☒ Preguntar a Ramón que le parece el compose
         -   ☒ Probarlo en el server central
             -   ☒ Solucionar error al acceder desde un buscador web al grafana en el server central
             -   ☒ Hacer que se pueda acceder a grafana desde https con traefik
