@@ -34,6 +34,8 @@ Grafana viene de base con una base de datos SQLite que emplea para guardar sus u
 
 ### Esquema Final
 
+![Diagrama de Grafana](/Diagrama1.png 'Diagrama de grafana')
+
 Telegraf recogerá los datos de cada màquina y los enviará a la base de datos InfluxDB que está en el server central. Una vez los datos están en la base de datos, Grafana enviarà una request cada 10s para saber los datos que tengamos configurados en el dashboard y representarlos. 
 
 ### Pasos seguidos
