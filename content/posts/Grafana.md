@@ -1,6 +1,9 @@
 ---
 title: "Grafana"
 date: 2022-07-26T20:17:02+02:00
+author : "Santiago Pastor Serrano"
+tags : ["grafana","influxdb", "telegraf", "ansible","deploy"]
+keywords : ["grafana", "influxdb", "telegraf", "ansible"]
 ---
 # Proyecto Grafana
 
