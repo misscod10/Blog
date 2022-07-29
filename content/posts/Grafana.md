@@ -6,7 +6,7 @@ date: 2022-07-26T20:17:02+02:00
 
 ## Introducción
 
-En este proyecto haré las configuraciones necesarias para monitorizar la utilización de recursos de todos los servidores desde una interfaz web.
+En este proyecto haré las configuraciones necesarias para monitorizar la utilización de recursos de un grupo de servidores desde una interfaz web.
 
 ### Programas y herramientas necesarias
 
@@ -22,7 +22,7 @@ Es una base de datos en tiempo real escrita en Go. Es a donde Telegraf va a mand
 
 #### Grafana
 
-Es el Dashboard que se encarga de representar toda la información que InfluxDB tiene almacenado. Accederemos a este servicio desde la dirección grafana.labs.pue.es.
+Es el Dashboard que se encarga de representar toda la información que InfluxDB tiene almacenado. Accederemos a este servicio desde la dirección localhost:3000.
 
 #### Traefik
 
@@ -30,11 +30,11 @@ Es la proxy inversa que vamos a utilizar para implementar el protocolo HTTPS cua
 
 #### MySQL (no obligatorio)
 
-Grafana viene de base con una base de datos SQLite que emplea para guardar sus usuarios, contraseñas, datasources etc. En la gran mayoría de casos esto sería suficiente, pero, Ramón me puso el desafío extra de substituir esa base de datos por un container de MySQL. Así que también lo usaré.
+Grafana viene de base con una base de datos SQLite que emplea para guardar sus usuarios, contraseñas, datasources etc. En la gran mayoría de casos esto sería suficiente, pero, me he puesto como desafío utilizar una MySQL en vez de la SQLite.
 
-### Objetivo final
+### Esquema Final
 
-Monitorizar los recursos de todos los servers desde el server central con un container de Grafana que se pueda ver desde la dirección de grafana.labs.pue.es. También que ese Grafana reciba la información desde un container de InfluxDB, que a su vez, recibirá la información de Telegrafs que estarán instalados tanto en local como en el resto de servers.
+Telegraf recogerá los datos de cada màquina y los enviará a la base de datos InfluxDB que está en el server central. Una vez los datos están en la base de datos, Grafana enviarà una request cada 10s para saber los datos que tengamos configurados en el dashboard y representarlos. 
 
 ### Pasos seguidos
 
