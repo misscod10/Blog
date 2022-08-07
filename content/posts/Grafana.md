@@ -73,9 +73,9 @@ Telegraf recogerá los datos de cada màquina y los enviará a la base de datos 
 
 Antes de instalar nada, hacemos un "update" para tener los últimos repositorios y ejecutamos la orden siguiente para instalar los programas que necesitaremos para la instalación:
 
-``` bash
-sudo apt install curl gnupg gnupg1 gnupg2 net-tools software-properties-common
-```
+    
+    sudo apt install curl gnupg gnupg1 gnupg2 net-tools software-properties-common
+    
 
 Estas herramientas suelen venir instaladas en la gran mayoría de distribuciones, pero no las encontraremos en una instalación de Ubuntu server mínima, así que viene bien ejecutarlo para asegurarse de que están, ya que son las herramientas que nos permitirán añadir repositorios extras.
 
@@ -83,7 +83,7 @@ Estas herramientas suelen venir instaladas en la gran mayoría de distribuciones
 
 Añadimos el repositorio de Influx para poder instalar Telegraf y InfluxDB:
 
-``` bash
+```bash
 sudo curl -sL https://repos.influxdata.com/influxdb.key | sudo apt-key add -
 
 source /etc/lsb-release
