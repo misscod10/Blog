@@ -41,15 +41,6 @@ logo = "https://cdnb.artstation.com/p/assets/images/images/032/778/277/large/con
 show = true
 title = "Santiago Pastor Serrano"
 
-[params.widget.qrcode]
-show = false
-title = "WeChat Official Account"
-url = "https://blogcdn.idoustudio.com/idoubi-mp.jpeg"
-
-[params.widget.links]
-show = false
-title = "Friendly Links"
-
 [[params.widget.links.items]]
 title = "Hugo"
 url = "https://gohugo.io"
@@ -57,10 +48,6 @@ url = "https://gohugo.io"
 [[params.widget.links.items]]
 title = "Theme period"
 url = "https://github.com/idoubi/hugo-theme-period"
-
-[params.widget.categories]
-show = false
-title = "Categories"
 
 [params.widget.tags]
 show = true
