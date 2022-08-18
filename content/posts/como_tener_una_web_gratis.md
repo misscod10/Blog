@@ -1,7 +1,7 @@
 ---
 title: "Como tener una web gratis"
 date: 2022-08-07T16:44:21+02:00
-draft: true
+draft: false
 tags: ["Hugo","Markdown","Github"]
 ---
 
