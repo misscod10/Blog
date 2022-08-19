@@ -15,20 +15,14 @@ weight = 1
 #url = "/_index.md"
 #weight = 2
 [[menu.main]]
-name = "About"
-url = "/about/"
+name = "About me"
+url = "/about"
 weight = 3
 
 [params]
 logo = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAl2chF0OuqvNKaMXWlh9GPn5vlHpSl0pXgQ&usqp=CAU"
 subTitle = "Un repositorio de mis apuntes"
 
-[params.cdn.js]
-highlightjs = "https://cdn.bootcdn.net/ajax/libs/highlight.js/10.3.2/highlight.min.js"
-jquery = "https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"
-
-[params.cdn.css]
-highlightjs = "https://cdn.bootcdn.net/ajax/libs/highlight.js/10.3.2/styles/an-old-hope.min.css"
 
 [params.comment]
 repo = "{org}/{repo}"
