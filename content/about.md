@@ -9,12 +9,13 @@ Hey, henlo!
 
 Soy Santiago Pastor Serrano, Sysadmin y friky de Warhammer 40k. Aunque si estas leyendo seguramente ya me conoces.
 
-Pues, huh... Esta pagina web sirve para tener mis apuntes y trabajos (y alguna que otra cosa chula que haga). Asi que mira y disfruta. 
+Planeo utilizar esta pagina web para tener mis apuntes y trabajos (y alguna que otra cosa chula que haga). Asi que mira y disfruta.
 
-Espero que os sea de probecho
+Espero que os sea de probecho.
 
 ---
 
 - [Currículum](https://drive.google.com/file/d/15CmvWMBbEG-EO38-mebVm8lVNcjeWfj_/view?usp=sharing)
 - [Github](https://github.com/misscod10)
+- [Linkedin](https://www.linkedin.com/in/santiago-pastor-serrano-75a5641a9)
 - misscod10@gmail.com
